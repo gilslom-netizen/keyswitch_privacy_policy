@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - KeySwitch Extension</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .lang-switcher {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .lang-btn {
+            background-color: #f1f3f4;
+            color: #3c4043;
+            border: 1px solid #dadce0;
+            padding: 8px 16px;
+            margin-left: 8px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .lang-btn:hover {
+            background-color: #e8eaed;
+        }
+        .lang-btn.active {
+            background-color: #1a73e8;
+            color: white;
+            border-color: #1a73e8;
+        }
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .policy-section {
+            display: none;
+        }
+        .policy-section.active {
+            display: block;
+        }
+        /* RTL support for Hebrew */
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        .rtl ul {
+            padding-right: 20px;
+            padding-left: 0;
+        }
+        h1 {
+            color: #1a73e8;
+            font-size: 28px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #e8f0fe;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #202124;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p, li {
+            font-size: 16px;
+            color: #5f6368;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight-box {
+            background-color: #e8f0fe;
+            border-left: 4px solid #1a73e8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .rtl .highlight-box {
+            border-left: none;
+            border-right: 4px solid #1a73e8;
+            border-radius: 4px 0 0 4px;
+        }
+        .highlight-box p {
+            margin: 0;
+            color: #1a73e8;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #9aa0a6;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Language Switcher Bar -->
+    <div class="lang-switcher">
+        <button id="btn-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
+        <button id="btn-he" class="lang-btn" onclick="setLanguage('he')">עברית</button>
+    </div>
+
+    <div class="container">
+        
+        <!-- ENGLISH VERSION -->
+        <div id="content-en" class="policy-section active">
+            <h1>Privacy Policy for KeySwitch</h1>
+            <p><strong>Effective Date:</strong> June 2026</p>
+
+            <p>Your privacy is extremely important to us. This Privacy Policy explains how our Chrome extension (KeySwitch) handles your data. We believe in complete transparency and have designed our extension to ensure your data stays where it belongs: on your local device.</p>
+
+            <div class="highlight-box">
+                <p>Core Principle: KeySwitch does not collect, store, or transmit any personal data, text inputs, or browsing history. Everything happens locally on your computer.</p>
+            </div>
+
+            <h2>1. Information Collection and Use</h2>
+            <p>KeySwitch is a productivity tool designed to convert accidentally mistyped text between keyboard layouts (Hebrew and English character mapping). To perform this function, the extension operates under the following rules:</p>
+            <ul>
+                <li><strong>No Text Tracking/Logging:</strong> The extension processes text either automatically in real-time (to detect layout errors as you type) or manually when you trigger a conversion via a keyboard shortcut or context menu. All text processing happens strictly in-memory on your local device to perform the character swap. Your text is never recorded, logged, saved, or visible to anyone.</li>
+                <li><strong>No Keystroke Logging:</strong> While the extension monitors layout patterns locally to provide the automatic switching feature, it does not track, record, or profile your general typing activity, passwords, or sensitive inputs.</li>
+                <li><strong>No Browsing History Access:</strong> Although the extension requires host permissions to function automatically across different websites, it does not track, read, or save the URLs or contents of the websites you visit.</li>
+            </ul>
+
+            <h2>2. Local Storage</h2>
+            <p>The extension utilizes the Chrome Extension Storage API (<code>chrome.storage.local</code>) to store only two types of data locally on your device:</p>
+            <ul>
+                <li>Your customized keyboard shortcut preferences (if modified).</li>
+                <li>A local activation counter used solely to determine when to display an occasional donation prompt after extended use.</li>
+            </ul>
+            <p>This data is never uploaded to any remote server and stays strictly inside your local browser profile.</p>
+
+            <h2>3. Third-Party Sharing</h2>
+            <p>Because we do not collect any user data, we do not sell, trade, or transfer any information to third parties. There are no tracking scripts, analytics tools, or third-party advertisements embedded within the extension.</p>
+            <p>The extension may display an optional donation button linking to PayPal. If you choose to click it, you leave the extension and PayPal's own privacy policy applies.</p>
+
+            <h2>4. Regulatory Compliance (GDPR / CCPA)</h2>
+            <p>We respect global privacy rights, including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). Since KeySwitch operates entirely locally, you maintain absolute control over your data. You can erase all stored preferences and counters at any time by clearing your browser cache or uninstalling the extension.</p>
+
+            <h2>5. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time. Any changes will be reflected by updating the "Effective Date" at the top of this page.</p>
+
+            <h2>6. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please feel free to contact us via email at gilslom@gmail.com or through the Chrome Web Store developer contact form.</p>
+
+            <div class="footer">
+                &copy; 2026 KeySwitch. Built with privacy in mind.
+            </div>
+        </div>
+
+        <!-- HEBREW VERSION -->
+        <div id="content-he" class="policy-section rtl">
+            <h1>מדיניות פרטיות עבור KeySwitch</h1>
+            <p><strong>תאריך עדכון:</strong> יוני 2026</p>
+
+            <p>הפרטיות שלך חשובה לנו מאוד. מדיניות פרטיות זו מסבירה כיצד תוסף הכרום שלנו (KeySwitch) מטפל בנתונים שלך. אנו מאמינים בשקיפות מלאה ותכננו את התוסף כך שהנתונים שלך יישארו בדיוק במקום אליו הם שייכים: במכשיר המקומי שלך.</p>
+
+            <div class="highlight-box">
+                <p>עקרון ליבה: תוסף KeySwitch אינו אוסף, שומר או משדר נתונים אישיים, קלטים של טקסט או היסטוריית גלישה. הכל מתבצע באופן מקומי במחשב שלך בלבד.</p>
+            </div>
+
+            <h2>1. איסוף מידע ושימוש בו</h2>
+            <p>תוסף KeySwitch הוא כלי פרודוקטיביות שנועד להמיר טקסט שהוקלד בשוגג בשפת מקלדת שגויה (מיפוי תווים בין עברית לאנגלית). כדי לבצע פעולה זו, התוסף פועל תחת הכללים המחמירים הבאים:</p>
+            <ul>
+                <li><strong>ללא מעקב או תיעוד טקסט:</strong> התוסף מעבד טקסט באופן אוטומטי בזמן אמת (כדי לזהות שגיאות פריסה תוך כדי הקלדה) או באופן ידני כאשר אתה מפעיל המרה באמצעות קיצור מקשים או תפריט לחיצה ימנית. כל עיבוד הטקסט מתבצע אך ורק בזיכרון המקומי במכשיר שלך לצורך החלפת התווים. הטקסט שלך מעולם לא נשמר, מתועד, נרשם או חשוף לאף גורם חיצוני.</li>
+                <li><strong>ללא תיעוד הקשות (Keystroke Logging):</strong> בעוד שהתוסף מנטר דפוסי פריסת מקלדת באופן מקומי כדי לספק את תכונת ההחלפה האוטומטית, הוא אינו עוקב, מתעד או מנתח את פעילות ההקלדה הכללית שלך, סיסמאות או קלטים רגישים.</li>
+                <li><strong>ללא גישה להיסטוריית הגלישה:</strong> למרות שהתוסף דורש הרשאות מארח (Host Permissions) כדי לפעול באופן אוטומטי באתרי אינטרנט שונים, הוא אינו עוקב, קורא או שומר את כתובות ה-URL או את תוכן האתרים שבהם אתה מבקר.</li>
+            </ul>
+
+            <h2>2. אחסון מקומי (Local Storage)</h2>
+            <p>התוסף משתמש ב-API של הדפדפן (<code>chrome.storage.local</code>) כדי לשמור אך ורק שני סוגי נתונים באופן מקומי על המכשיר שלך:</p>
+            <ul>
+                <li>העדפות קיצורי הדרך המותאמות אישית שלך (במידה ושינית אותן).</li>
+                <li>מונה הפעלות מקומי המשמש אך ורק כדי לקבוע מתי להציג בקשת תרומה מזדמנת לאחר שימוש ממושך בתוסף.</li>
+            </ul>
+            <p>נתונים אלו אינם מועלים לעולם לשרת מרוחק ונשארים אך ורק בתוך פרופיל הדפדפן המקומי שלך.</p>
+
+            <h2>3. שיתוף מידע עם צדדים שלישיים</h2>
+            <p>מכיוון שאיננו אוספים נתונים של משתמשים, איננו מוכרים, סוחרים או מעבירים מידע כלשהו לגורמים חיצוניים. אין סקריפטים של מעקב, כלי אנליטיקה או פרסומות המוטמעים בתוך התוסף.</p>
+            <p>התוסף עשוי להציג כפתור תרומה אופציונלי המקשר לאתר PayPal. אם תבחר ללחוץ עליו, תועבר אל מחוץ לסביבת התוסף ומדיניות הפרטיות של PayPal היא זו שתחול.</p>
+
+            <h2>4. תאימות לתקנות הגנת הפרטיות (GDPR / CCPA)</h2>
+            <p>אנו מכבדים את זכויות הפרטיות הגלובליות, לרבות תקנות ה-GDPR האירופיות וחוק ה-CCPA של קליפורניה. מאחר ש-KeySwitch פועל באופן מקומי לחלוטין, השליטה המלאה בנתונים נמצאת בידיך. באפשרותך למחוק את כל ההגדרות והמונים המקומיים בכל עת על ידי ניקוי נתוני הדפדפן (Cache) או על ידי הסרת התוסף.</p>
+
+            <h2>5. שינויים במדיניות פרטיות זו</h2>
+            <p>אנו עשויים לעדכן את מדיניות הפרטיות שלנו מעת לעת. כל שינוי יבוא לידי ביטוי על ידי עדכון "תאריך העדכון" בראש עמוד זה.</p>
+
+            <h2>6. יצירת קשר</h2>
+            <p>אם יש לך שאלות כלשהן בנוגע למדיניות פרטיות זו, אל תהסס לפנות אלינו באמצעות דואר אלקטרוני לכתובת gilslom@gmail.com או דרך טופס יצירת הקשר בעמוד המפתח ב-Chrome Web Store.</p>
+
+            <div class="footer">
+                &copy; 2026 KeySwitch. נבנה תוך שמירה מלאה על הפרטיות.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            // Get elements
+            const contentEn = document.getElementById('content-en');
+            const contentHe = document.getElementById('content-he');
+            const btnEn = document.getElementById('btn-en');
+            const btnHe = document.getElementById('btn-he');
+
+            // Toggle active classes and visibility
+            if (lang === 'he') {
+                contentEn.classList.remove('active');
+                contentHe.classList.add('active');
+                btnEn.classList.remove('active');
+                btnHe.classList.add('active');
+                document.title = "מדיניות פרטיות - תוסף KeySwitch";
+            } else {
+                contentHe.classList.remove('active');
+                contentEn.classList.add('active');
+                btnHe.classList.remove('active');
+                btnEn.classList.add('active');
+                document.title = "Privacy Policy - KeySwitch Extension";
+            }
+        }
+    </script>
+</body>
+</html>
